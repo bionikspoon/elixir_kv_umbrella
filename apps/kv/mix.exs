@@ -19,8 +19,11 @@ defmodule KV.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger],
-      mod: { KV, []}]
+    [
+      extra_applications: [:logger],
+      env: [routing_table: []],
+      mod: { KV, []}
+    ]
   end
 
   # Dependencies can be Hex packages:
